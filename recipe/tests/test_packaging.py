@@ -7,7 +7,7 @@ import cylc.uiserver
 
 
 def check_path(path):
-    package_path = Path(cylc.uiserver.__file__).parent / path
+    package_path = Path(cylc.uiserver.__file__).parent.parent / path
     if not package_path.exists():
         raise Exception(f'Path does not exist: {package_path}')
     print(f'Path found in: {package_path}')
